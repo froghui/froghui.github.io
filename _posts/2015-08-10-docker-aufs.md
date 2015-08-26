@@ -2,7 +2,8 @@
 layout: post
 title:  "docker 存储之aufs"
 date:   2015-08-10 11:33:25
-categories: docker linux
+categories: linux 
+tags: docker linux
 ---
 概述
 ========
