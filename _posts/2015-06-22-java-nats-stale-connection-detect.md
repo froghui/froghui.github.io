@@ -6,7 +6,8 @@ categories: java
 tags: java messaging
 ---
 PaaS项目中使用了nats作为Messaging， 客户端都使用java-nats和nats-server进行通信。今天机房发生停电之后，发现很多nats client不能重新连上nats-server.
-在nats-server端查看TCP connction, 发现对应客户端的连接不存在，但是到了对应的nats-client (如10.101.10.20)可以看到连接到连接是正常的。例如0.101.0.11:4222 ESTABLISHED状态。这样nats-server发送到 client的消息超时，实际上连接并不存在。
+在nats-server端查看TCP connction, 发现对应客户端的连接不存在，但是到了对应的nats-client (如10.101.10.20)可以看到连接到连接是正常的。
+例如0.101.0.11:4222 ESTABLISHED状态。这样nats-server发送到 client的消息超时，实际上连接并不存在。
 
 解决方法： nats-client和server直接增加心跳，如果断连则重连。
 
@@ -18,18 +19,14 @@ PaaS项目中使用了nats作为Messaging， 客户端都使用java-nats和nats-
 
 nats-client使用的netty版本默认并不enable KEEPALIVE.
 
+    Bootstrap b = new Bootstrap(); // (1) 
+    b.group(workerGroup); // (2)  
+    b.channel(NioSocketChannel.class); // (3)  
+    b.option(ChannelOption.SO_KEEPALIVE, true); // (4)  
 
-{% highlight java %}
-Bootstrap b = new Bootstrap(); // (1)
-b.group(workerGroup); // (2)
-b.channel(NioSocketChannel.class); // (3)
-b.option(ChannelOption.SO_KEEPALIVE, true); // (4)
-{% endhighlight %}
 
 猜测是B1机房断电，导致10.101.0.11到以下几台机器的网络出现故障，从而引起nats-server将原来的连接删除。而nats-client没有引入心跳机制，并不能感应网络故障。
 
-
-{% highlight ruby %}
     def send_ping
       return if @closing
       if @pings_outstanding > NATSD::Server.ping_max
@@ -40,7 +37,6 @@ b.option(ChannelOption.SO_KEEPALIVE, true); // (4)
       flush_data
       @pings_outstanding += 1
     end
-{% endhighlight %}
 
 nats-server kill掉，nats-client 收到socker FIN包，nats-client系统发起事件，java-nats(netty)传递给Listener，从而通知NatsImpl重连
 socker FIN包收不到的情况： 1)网络丢包 2)nats-server断电 (没有办法做清除)， 3)kernel panic等
@@ -53,8 +49,7 @@ socker FIN包收不到的情况： 1)网络丢包 2)nats-server断电 (没有办
 
 结论是不能完全依赖server端的FIN包达到连接重置的目标。一定要在client端引入心跳机制，自动重连。
 
-{% highlight java %}
-Thread [nioEventLoopGroup-2-3] (Suspended (breakpoint at line 171 in NatsImpl$1))    
+    Thread [nioEventLoopGroup-2-3](Suspended (breakpoint at line 171 in NatsImpl$1))    
     NatsImpl$1.operationComplete(ChannelFuture) line: 171    
     NatsImpl$1.operationComplete(Future) line: 168    
     DefaultPromise<V>.notifyListener0(Future, GenericFutureListener) line: 680    
@@ -70,13 +65,11 @@ Thread [nioEventLoopGroup-2-3] (Suspended (breakpoint at line 171 in NatsImpl$1)
     SingleThreadEventExecutor$2.run() line: 116    
     DefaultThreadFactory$DefaultRunnableDecorator.run() line: 137    
     FastThreadLocalThread(Thread).run() line: 745    
-{% endhighlight %}
 
 通过设置iptables来测试，模拟nats-server的FIN包被drop掉得情形。
-{% highlight bash %}
-iptables -A INPUT -p tcp -s 10.101.0.11/32 --dport 59482 DROP
-net=src+dst    port=src port + dst port
-tcpdump -nXXvv net 10.101.0.11 port 4222
-tcpdump -nXXvv port 4222
-{% endhighlight %}
+
+    iptables -A INPUT -p tcp -s 10.101.0.11/32 --dport 59482 DROP
+    net=src+dst    port=src port + dst port
+    tcpdump -nXXvv net 10.101.0.11 port 4222
+    tcpdump -nXXvv port 4222
 
