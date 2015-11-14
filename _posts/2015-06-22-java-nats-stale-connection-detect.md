@@ -3,7 +3,7 @@ layout: post
 title:  "解决java-nats不能重连的问题"
 date:   2015-06-22 13:34:55
 categories: java
-tags: java messaging
+tags: java network
 ---
 PaaS项目中使用了nats作为Messaging， 客户端都使用java-nats和nats-server进行通信。今天机房发生停电之后，发现很多nats client不能重新连上nats-server.
 在nats-server端查看TCP connction, 发现对应客户端的连接不存在，但是到了对应的nats-client (如10.101.10.20)可以看到连接到连接是正常的。
