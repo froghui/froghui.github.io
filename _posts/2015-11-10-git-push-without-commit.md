@@ -13,7 +13,7 @@ tags: git
 为了证实我的想法，我试着按以下步骤做了一下
 
 	git checkout -b testdev dev
-	git push origin testdev
+	git push origin testdev    （@0197802400）
 
 	echo "this is just a text" > test.txt
 	git commit -m "this is just a test"
