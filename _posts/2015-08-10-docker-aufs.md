@@ -2,8 +2,8 @@
 layout: post
 title:  "docker 存储之aufs"
 date:   2015-08-10 11:33:25
-categories: linux 
-tags: docker linux storage
+categories: docker 
+tags: docker linux
 ---
 概述
 ========
@@ -45,6 +45,7 @@ aufs的目录主要分成三种 diff,layers和mnt。下面一一解释
 	05a707a5c88538f5695ce679e1b61331b43a24faf3a755b12ff7873fd4e62003
 	8a09e63f6f5cca6b2b88f2a50f6a5c5399002f8394bf6dd44243ebec7277e632
 	...
+
 
 	/var/lib/docker/aufs/mnt/{containerId}:
 	/var/lib/docker/aufs/mnt/{containerId-init}:
@@ -88,7 +89,7 @@ docker create and run
 	:/var/lib/docker/aufs/diff/{parentofBaseImageId}=ro+wh ...
 	/var/lib/docker/aufs/mnt/{conatainer}-init
 
-其次准备container top-level 的一些文件，即对/var/lib/docker/aufs/mnt/{conatainer}-init写入一些top-level文件，也就是写到/var/lib/docker/aufs/diff/{containerId}-init中, 这是为了起到保护作用。这些文件主要是/dev/shm, /dev/console, /etc和网络相关的配置等。
+其次准备container top-level 的一些文件，即对/var/lib/docker/aufs/mnt/{conatainer}-init写入一些top-level文件，也就是写到/var/lib/docker/aufs/diff/{containerId}-init中, 这是为了起到保护作用。这些文件主要是/dev/shm, /dev/console, /etc/hostname, /etc/hosts, /etc/resolv.conf等网络相关的配置等。这里要注意的是这里写到/diff/{containerId}-init中的都是空文件，而实际在container里面使用的这些文件或者目录，都会在子进程中重新mount到rootfs中。实际上，子进程不仅mount这些/dev/shm, /dev/console, /etc/hostname, /etc/hosts, /etc/resolv.conf, /proc, /sys， 而且会mount挂载的volumn。
 
 	root@vagrant-ubuntu-trusty-64:/var/lib/docker/aufs/diff/7e825e149f15854727c1a77f88d92726458197c11b52d6375664db1e4065e0ae-init/dev# ls -al
 	total 12
