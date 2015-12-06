@@ -156,7 +156,7 @@ int net_add(unicorn_t * u){
 *   使用pivot_root或者choot切换到预先准备好的rootfs
 *   mount其他需要的文件到rootfs，例如volums, /etc/hostname, /etc/hosts, /etc/reslov.conf，伪文件系统/sys,/proc, /dev/pts, /dev/shm等。
 *   配置网络，包括hostname以及interfaces(虚拟网卡对的另一端)。
-*   调用exec系统调用运行对应的入口程序如bash，start.sh等。
+*   调用exec系统调用运行对应的入口程序如bash，start.sh等。(对应docker中的CMD或者ENTRYPOINT)
 
 ````C
 char* const child_args[] = {
