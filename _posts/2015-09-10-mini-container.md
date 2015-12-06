@@ -3,7 +3,7 @@ layout: post
 title:  "step by step build a mini linux container"
 date:   2015-09-10 11:33:25
 categories: docker 
-tags: docker linux storage
+tags: docker linux
 ---
 # 概述
 Linux container技术现在可谓是如火如荼，尤其以docker为代表(更早一点的有lxc, warden等)。虽然linux container是一种进程级别的技术，但由于其使用了linux kernel提供的资源隔离和限制的功能，可以“伪装”出一台小的"虚拟机"，并且这台小虚拟机占用资源少，“虚拟”速度快，因而被一致的认为是很有前途的超越虚拟机的技术。

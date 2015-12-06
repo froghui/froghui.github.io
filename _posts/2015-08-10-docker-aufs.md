@@ -3,7 +3,7 @@ layout: post
 title:  "docker 存储之aufs"
 date:   2015-08-10 11:33:25
 categories: docker 
-tags: docker linux
+tags: docker linux storage
 ---
 概述
 ========
