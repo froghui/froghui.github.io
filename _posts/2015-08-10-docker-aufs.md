@@ -11,8 +11,7 @@ docker将网络，存储，监控以及cgroup/namespace和docker本身抽象隔�
 
 *	execdriver  — lxc libcontianer 实现隔离(cgroup + namespace)  
 基于cgroup, namespace将image运行起来，隔离多个进程，这方面包括uts, process, memory，network等等。docker支持lib container和lxc两种方式实现。  
-*	graphdriver — 实现image和container的存储 (rootfs)   graph和aufs(device mapper)目录  
-*	metricdriver — docker的状态监控  
+*	graphdriver — 实现image和container的存储 (rootfs)   graph和aufs(device mapper)目录   
 *	networkdriver — docker vm的网络设置  （bridge+iptables) (bridge + mac switch) (ipvlan)  
 
 
