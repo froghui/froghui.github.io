@@ -19,14 +19,17 @@ PaaS项目中使用了nats作为Messaging， 客户端都使用java-nats和nats-
 
 nats-client使用的netty版本默认并不enable KEEPALIVE.
 
+```java
     Bootstrap b = new Bootstrap(); // (1) 
     b.group(workerGroup); // (2)  
     b.channel(NioSocketChannel.class); // (3)  
     b.option(ChannelOption.SO_KEEPALIVE, true); // (4)  
+```java
 
 
 猜测是B1机房断电，导致10.101.0.11到以下几台机器的网络出现故障，从而引起nats-server将原来的连接删除。而nats-client没有引入心跳机制，并不能感应网络故障。
 
+```ruby
     def send_ping
       return if @closing
       if @pings_outstanding > NATSD::Server.ping_max
@@ -37,6 +40,7 @@ nats-client使用的netty版本默认并不enable KEEPALIVE.
       flush_data
       @pings_outstanding += 1
     end
+```
 
 nats-server kill掉，nats-client 收到socker FIN包，nats-client系统发起事件，java-nats(netty)传递给Listener，从而通知NatsImpl重连
 socker FIN包收不到的情况： 1)网络丢包 2)nats-server断电 (没有办法做清除)， 3)kernel panic等
@@ -49,6 +53,7 @@ socker FIN包收不到的情况： 1)网络丢包 2)nats-server断电 (没有办
 
 结论是不能完全依赖server端的FIN包达到连接重置的目标。一定要在client端引入心跳机制，自动重连。
 
+```java
     Thread [nioEventLoopGroup-2-3](Suspended (breakpoint at line 171 in NatsImpl$1))    
     NatsImpl$1.operationComplete(ChannelFuture) line: 171    
     NatsImpl$1.operationComplete(Future) line: 168    
@@ -65,11 +70,14 @@ socker FIN包收不到的情况： 1)网络丢包 2)nats-server断电 (没有办
     SingleThreadEventExecutor$2.run() line: 116    
     DefaultThreadFactory$DefaultRunnableDecorator.run() line: 137    
     FastThreadLocalThread(Thread).run() line: 745    
+```java
 
 通过设置iptables来测试，模拟nats-server的FIN包被drop掉得情形。
 
+```bash
     iptables -A INPUT -p tcp -s 10.101.0.11/32 --dport 59482 DROP
     net=src+dst    port=src port + dst port
     tcpdump -nXXvv net 10.101.0.11 port 4222
     tcpdump -nXXvv port 4222
+```bash
 

@@ -1,0 +1,1030 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+body .markdown-body {
+    padding: 45px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    word-wrap: break-word;
+}
+
+pre {
+    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  color: #333;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body input {
+  font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.markdown-body a {
+  color: #4078c0;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body .select::-ms-expand {
+  opacity: 0;
+}
+
+.markdown-body .octicon {
+  font: normal normal normal 16px/1 octicons-anchor;
+  display: inline-block;
+  text-decoration: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.markdown-body .octicon-link:before {
+  content: '\f05c';
+}
+
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body .anchor {
+  display: inline-block;
+  padding-right: 2px;
+  margin-left: -18px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #000;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h1 .anchor {
+  line-height: 1;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 .anchor {
+  line-height: 1;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h3 .anchor {
+  line-height: 1.2;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 .anchor {
+  line-height: 1.2;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h5 .anchor {
+  line-height: 1.1;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body h6 .anchor {
+  line-height: 1.1;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: #fff;
+}
+
+.markdown-body code {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.markdown-body .pl-c {
+  color: #969896;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #0086b3;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #795da3;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #333;
+}
+
+.markdown-body .pl-ent {
+  color: #63a35c;
+}
+
+.markdown-body .pl-k {
+  color: #a71d5d;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #183691;
+}
+
+.markdown-body .pl-v {
+  color: #ed6a43;
+}
+
+.markdown-body .pl-id {
+  color: #b52a1d;
+}
+
+.markdown-body .pl-ii {
+  background-color: #b52a1d;
+  color: #f8f8f8;
+}
+
+.markdown-body .pl-sr .pl-cce {
+  color: #63a35c;
+  font-weight: bold;
+}
+
+.markdown-body .pl-ml {
+  color: #693a17;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  color: #1d3e81;
+  font-weight: bold;
+}
+
+.markdown-body .pl-mq {
+  color: #008080;
+}
+
+.markdown-body .pl-mi {
+  color: #333;
+  font-style: italic;
+}
+
+.markdown-body .pl-mb {
+  color: #333;
+  font-weight: bold;
+}
+
+.markdown-body .pl-md {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.markdown-body .pl-mi1 {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.markdown-body .pl-mdr {
+  color: #795da3;
+  font-weight: bold;
+}
+
+.markdown-body .pl-mo {
+  color: #1d3e81;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.markdown-body .plan-price-unit {
+  color: #767676;
+  font-weight: normal;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 0.35em 0.25em -1.6em;
+  vertical-align: middle;
+}
+
+.markdown-body .plan-choice {
+  padding: 15px;
+  padding-left: 40px;
+  display: block;
+  border: 1px solid #e0e0e0;
+  position: relative;
+  font-weight: normal;
+  background-color: #fafafa;
+}
+
+.markdown-body .plan-choice.open {
+  background-color: #fff;
+}
+
+.markdown-body .plan-choice.open .plan-choice-seat-breakdown {
+  display: block;
+}
+
+.markdown-body .plan-choice-free {
+  border-radius: 3px 3px 0 0;
+}
+
+.markdown-body .plan-choice-paid {
+  border-radius: 0 0 3px 3px;
+  border-top: 0;
+  margin-bottom: 20px;
+}
+
+.markdown-body .plan-choice-radio {
+  position: absolute;
+  left: 15px;
+  top: 18px;
+}
+
+.markdown-body .plan-choice-exp {
+  color: #999;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.markdown-body .plan-choice-seat-breakdown {
+  margin-top: 10px;
+  display: none;
+}
+
+.markdown-body :checked+.radio-label {
+  z-index: 1;
+  position: relative;
+  border-color: #4078c0;
+}
+</style><title>2015-04-22-linux012-mm</title></head><body><article class="markdown-body"><hr>
+
+<p>layout: post
+title:  "Linux 0.12源码阅读之内存管理"
+date:   2015-04-22 20:33:25
+categories: linux </p>
+
+<h2>
+<a id="user-content-tags-linux" class="anchor" href="#tags-linux" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>tags: linux</h2>
+
+<h1>
+<a id="user-content-1内存初始化" class="anchor" href="#1%E5%86%85%E5%AD%98%E5%88%9D%E5%A7%8B%E5%8C%96" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1.内存初始化</h1>
+
+<p>在linux0.12中，默认最大可以支持16M物理内存，如果需要支持更大的物理内存需要自己修改代码。整个16M内存被线性划分为如下区域:1M以下为内核使用的区域，1M-4M为高速缓冲区，用来将磁盘数据缓冲至此，从而提高读写效率;4M-4.5M为虚拟磁盘，4.5M以上为主存区。最大可达到4.5M-16M。
+<a href="./assets/2015-04-22-linux012-mm/distribution.png" target="_blank"><img src="/assets/2015-04-22-linux012-mm/distribution.png" alt="" style="max-width:100%;"></a></p>
+
+<p>内核将主存区域划分为页进行管理，每个页都有mem_map数组元素与之对应，用来记录该页数据是否已被使用。在初始化内存时，对mem_map的每个元素设置为100(Used)，而将主存区域start_mem和end_mem之间的mem_map设置为0(Available)。这样在遍历整个内存空间时，仅仅主存区域可被选择。</p>
+
+<pre><code>#define PAGING_MEMORY (15*1024*1024) //总共可用物理内存
+#define PAGING_PAGES (PAGING_MEMORY&gt;&gt;12) //总共管理的物理内存页数
+
+//标识位数组，每个page一个，数组大小为3840，需要占内存3840 Byte (一个page4K以内)
+unsigned char mem_map [ PAGING_PAGES ] = {0,};
+</code></pre>
+
+<p>mem_map的索引为物理地址页(4K)，所以物理内存的管理是以牺牲一页物理内存4K字节为代价的。
+而从物理地址映射到mem_map的关系为：</p>
+
+<p>mem_map[(physicalAddrss-1M)&gt;&gt;12]。mem_map的值为该物理内存共享的数量。</p>
+
+<p>内存是同时开启分段和分页机制管理的, 分段是通过GTD, LTD等来完成的，而分页是通过页目录表(page dir table)和页表(page table)来达到的：其中线性地址的31-22为页目录项，21-12位为页表项，最后12为页内偏移地址。</p>
+
+<ul>
+<li>  页目录表(page dir table): linux0.12使用一页内存保存了真个系统的页目录表，一共可以支持2^10=1024个页目录表项，每个页目录表项可以管理4M内存，所以理论上linux0.12可以支持4G内存。其中前4个页目录表项对应的16M物理内存为内核初始化并使用。对于内核代码而言，线性地址即为物理地址。</li>
+<li>  页表(page table):  一个页目录表项对应1024个页表项，最后映射到的内存为4096*1024 = 4M, 即1024个内存页。
+<a href="/assets/2015-04-22-linux012-mm/dir.png" target="_blank"><img src="/assets/2015-04-22-linux012-mm/dir.png" alt="" style="max-width:100%;"></a>
+</li>
+</ul>
+
+<p>页表项数据，P=1时表示该页数据在内存中。P=0表示该页数据在swap中，并且前31bit代表的swap_nr，即映射都硬盘位置的标号。
+<a href="/assets/2015-04-22-linux012-mm/direntry.png" target="_blank"><img src="/assets/2015-04-22-linux012-mm/direntry.png" alt="" style="max-width:100%;"></a></p>
+
+<h1>
+<a id="user-content-2缺页处理-do_no_page" class="anchor" href="#2%E7%BC%BA%E9%A1%B5%E5%A4%84%E7%90%86-do_no_page" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2.缺页处理 do_no_page</h1>
+
+<p>当访问一页线性地址，该线性地址出现下列情形导致不能被直接访问时</p>
+
+<ul>
+<li>  并不在页目录表中</li>
+<li>  在页目录表但是页表项不存在 </li>
+<li>  页表项存在页frame没有加载到内存时，</li>
+</ul>
+
+<p>80X86体结构的CPU会发起中断。将该线性地址压入CR2寄存器，通过中断门可以处理该中断。do_no_page即为该中断处理程序，其主要作用是在页目录表和页表中加入该线性address,并将对应数据加载到主存中。这里线性地址和应用程序相关，比如/usr/bin/java这个程序代码需要加载到主存中。 值得注意的是，文件数据的加载必须通过高速缓存区，也就是说,/usr/bin/java这个程序对应的二进制代码被首先加载到高速缓存区，然后再被进程A,B,C分别拷贝一份到主存区，由各自的线性地址空间与之关联。
+整个do_no_page处理如下：</p>
+
+<ul>
+<li>  首先进行数据校验，即输入的线性地址必须在64M*nr之内。否则报错退出。 </li>
+<li>  然后如果发现线性地址已经在页目录表中存在，并且对应的页表项也存在页frame没有加载到内存中，说明该页frame曾经被刷到内存中后被交换到硬盘上，那么直接从swap分区将该页frame加载到内存中。</li>
+<li>  之后根据线性地址，判断需要加载的数据是否在代码/数据区，是否在lib区。linux0.12对一个任务分配了64M*nr~64M*(nr+1)的线性地址空间，这64M地址的分布布局是一定的，最顶端为lib区，然后是环境变量和参数，接下来是用户进程堆栈；实际的代码/数据区从64M地址的底端往上长。如果需要加载的线性地址不在代码/数据区或者lib区，那么应该是给该进程分配堆栈数据，则直接分配一页空间，并将这一页物理地址和address做关联。 </li>
+<li>  如果在代码/数据区或者lib区，那么根据inode值，在其他运行的任务中尝试寻找已经打开该inode，并且对应的物理页已经加载过的任务。因为两个任务若加载同样的exe/lib，并且同样的物理地址被加载，根据每个任务在线性空间的分配，address-start_code的偏移量应该是一样的，对应的目标线性地址应该在page dir/page table中可以找到，并且根据页表项P标志位知道是否位于内存中。如果位于内存中，那么直接返回。 </li>
+<li>  如果共享不成功(没有任务打开inode，或者对应inode的这块线性地址并没有在物理内存中)，则根据线性地址和inode可以计算出需要读的磁盘block号，读出4个block(1 block = 1K)到物理页page中，并把超过end_data的置0，最后将address的线性地址和读出的物理页page关联(put_page)。由于当前进程在64M线性地址空间的分布是按照:
+<strong>text-data-bss</strong>这样划分的，所以address - start_code就是相当于可执行程序文件的偏移量。据此，可以算出在inode中的块号，然后再通过文件系统算出最终对应于磁盘上的块号。</li>
+</ul>
+
+<div class="highlight highlight-source-c"><pre>    <span class="pl-c">//缺页处理, address为输入的线性地址</span>
+    <span class="pl-k">void</span> <span class="pl-en">do_no_page</span>(<span class="pl-k">unsigned</span> <span class="pl-k">long</span> error_code,<span class="pl-k">unsigned</span> <span class="pl-k">long</span> address)
+    {
+        <span class="pl-k">int</span> nr[<span class="pl-c1">4</span>];
+        <span class="pl-k">unsigned</span> <span class="pl-k">long</span> tmp;
+        <span class="pl-k">unsigned</span> <span class="pl-k">long</span> page;
+        <span class="pl-k">int</span> block,i;
+        <span class="pl-k">struct</span> m_inode * inode;
+
+        <span class="pl-k">if</span> (address &lt; TASK_SIZE)
+            <span class="pl-c1">printk</span>(<span class="pl-s"><span class="pl-pds">"</span><span class="pl-cce">\n\r</span>BAD!! KERNEL PAGE MISSING<span class="pl-cce">\n\r</span><span class="pl-pds">"</span></span>);
+        <span class="pl-k">if</span> (address - current-&gt;start_code &gt; TASK_SIZE) {
+            <span class="pl-c1">printk</span>(<span class="pl-s"><span class="pl-pds">"</span>Bad things happen: nonexistent page error in do_no_page<span class="pl-cce">\n\r</span><span class="pl-pds">"</span></span>);
+            <span class="pl-c1">do_exit</span>(SIGSEGV);
+        }
+        <span class="pl-c">//dir=0，得到页目录项值</span>
+        page = *(<span class="pl-k">unsigned</span> <span class="pl-k">long</span> *) ((address &gt;&gt; <span class="pl-c1">20</span>) &amp; 0xffc); 
+        <span class="pl-k">if</span> (page &amp; <span class="pl-c1">1</span>) {
+            page &amp;= 0xfffff000;<span class="pl-c">//页表地址</span>
+            <span class="pl-c">//页表项物理地址 = 页表基地址 + 页表项偏移量</span>
+            page += (address &gt;&gt; <span class="pl-c1">10</span>) &amp; 0xffc; 
+            tmp = *(<span class="pl-k">unsigned</span> <span class="pl-k">long</span> *) page;<span class="pl-c">//页表项值</span>
+            <span class="pl-k">if</span> (tmp &amp;&amp; !(<span class="pl-c1">1</span> &amp; tmp)) {<span class="pl-c">//页表项对应的页面不在内存中，从swap分区加载</span>
+                <span class="pl-c1">swap_in</span>((<span class="pl-k">unsigned</span> <span class="pl-k">long</span> *) page);
+                <span class="pl-k">return</span>;
+            }
+        }
+        <span class="pl-c">//这里根据需要的线性地址和当前任务的线性地址开始处的差</span>
+        <span class="pl-c">//可以计算出在该inode中需要读的block号，</span>
+        address &amp;= 0xfffff000;
+        tmp = address - current-&gt;start_code;
+        <span class="pl-k">if</span> (tmp &gt;= LIBRARY_OFFSET ) {
+            inode = current-&gt;library;
+            block = <span class="pl-c1">1</span> + (tmp-LIBRARY_OFFSET) / BLOCK_SIZE;
+        } <span class="pl-k">else</span> <span class="pl-k">if</span> (tmp &lt; current-&gt;end_data) {
+            inode = current-&gt;executable;
+            block = <span class="pl-c1">1</span> + tmp / BLOCK_SIZE;
+        } <span class="pl-k">else</span> {
+            inode = <span class="pl-c1">NULL</span>;
+            block = <span class="pl-c1">0</span>;
+        }
+
+        <span class="pl-c">//不在当前进程的CS/DS线性地址范围内，直接分配一页</span>
+        <span class="pl-k">if</span> (!inode) {
+            <span class="pl-c1">get_empty_page</span>(address);
+            <span class="pl-k">return</span>;
+        }
+        <span class="pl-c">//如果当前进程的inode被别的进程加载，则尝试共享，共享计数加1并返回</span>
+        <span class="pl-k">if</span> (<span class="pl-c1">share_page</span>(inode,tmp))
+            <span class="pl-k">return</span>;
+        <span class="pl-c">//前两种情形都不存在，只好新建一页，然后读取address处指定的4K数据(1 page)</span>
+        <span class="pl-k">if</span> (!(page = <span class="pl-c1">get_free_page</span>()))
+            <span class="pl-c1">oom</span>();
+    <span class="pl-c">/* remember that 1 block is used for header */</span>
+        <span class="pl-c">//第一个block空出来不用，所以block要从1开始算起</span>
+        <span class="pl-k">for</span> (i=<span class="pl-c1">0</span> ; i&lt;<span class="pl-c1">4</span> ; block++,i++)
+            nr[i] = <span class="pl-c1">bmap</span>(inode,block);
+        <span class="pl-c1">bread_page</span>(page,inode-&gt;i_dev,nr);
+
+        <span class="pl-c">//下面对超过end_data区域的数据清0</span>
+        i = tmp + <span class="pl-c1">4096</span> - current-&gt;end_data;
+        <span class="pl-k">if</span> (i&gt;<span class="pl-c1">4095</span>)
+            i = <span class="pl-c1">0</span>;
+        tmp = page + <span class="pl-c1">4096</span>;
+        <span class="pl-k">while</span> (i-- &gt; <span class="pl-c1">0</span>) {
+            tmp--;
+            *(<span class="pl-k">char</span> *)tmp = <span class="pl-c1">0</span>;
+        }
+        <span class="pl-k">if</span> (<span class="pl-c1">put_page</span>(page,address))
+            <span class="pl-k">return</span>;
+        <span class="pl-c">//出错处理</span>
+        <span class="pl-c1">free_page</span>(page);
+        <span class="pl-c1">oom</span>();
+    }</pre></div>
+
+<h1>
+<a id="user-content-3页写保护处理-do_wp_page" class="anchor" href="#3%E9%A1%B5%E5%86%99%E4%BF%9D%E6%8A%A4%E5%A4%84%E7%90%86-do_wp_page" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3.页写保护处理 do_wp_page</h1>
+
+<p>linux0.12采取了load-on-demand和copy-on-write的策略，当调用系统调用fork出一个子进程时，子进程和父亲进程会共享物理内存，并且子进程和父进程的页表项会被置为只读，当子进程或者父进程的任何一方企图对自己的进程空间线性地址进行写操作时，CPU会触发写保护中断操作，do_wp_page这时候会被调用。其主要作用就是新开辟一页内存，以便进程空间线性地址进行写操作可以继续执行。如果一个子进程在fork处理之后直接去执行execve。则会节省下这段内存。</p>
+
+<pre><code>//table_entry:页表项
+//该函数执行copy-on-write
+//即在table_entry指向的物理内存(old_page)并没有分配的情行下，
+//从物理内存中分配一页，从old_page拷贝
+//fork系统调用的底层实现
+void un_wp_page(unsigned long * table_entry)
+{
+    unsigned long old_page,new_page;
+
+    old_page = 0xfffff000 &amp; *table_entry;
+    //如果shared-counter为1直接返回
+    if (old_page &gt;= LOW_MEM &amp;&amp; mem_map[MAP_NR(old_page)]==1) {
+        *table_entry |= 2;
+        invalidate();
+        return;
+    }
+    if (!(new_page=get_free_page()))
+        oom();
+    if (old_page &gt;= LOW_MEM)
+        mem_map[MAP_NR(old_page)]--;
+    copy_page(old_page,new_page);
+    *table_entry = new_page | 7;
+    invalidate();
+}   
+
+/*
+ * This routine handles present pages, when users try to write
+ * to a shared page. It is done by copying the page to a new address
+ * and decrementing the shared-page counter for the old page.
+ *
+ * If it's in code space we exit with a segment error.
+ */
+void do_wp_page(unsigned long error_code,unsigned long address)
+{
+    if (address &lt; TASK_SIZE)
+        printk("\n\rBAD! KERNEL MEMORY WP-ERR!\n\r");
+    if (address - current-&gt;start_code &gt; TASK_SIZE) {
+        printk("Bad things happen: page error in do_wp_page\n\r");
+        do_exit(SIGSEGV);
+    }
+#if 0
+/* we cannot do this yet: the estdio library writes to code space */
+/* stupid, stupid. I really want the libc.a from GNU */
+    if (CODE_SPACE(address))
+        do_exit(SIGSEGV);
+#endif
+    //考虑到4字节一个entitry
+    //(address&gt;&gt;20) &amp;0xffc 就是 (address&gt;&gt;22) &amp;0x3ff &gt;&gt;2 页目录项值
+    //(address&gt;&gt;10) &amp; 0xffc 就是 (address&gt;&gt;12) &amp;0x3ff &gt;&gt;2 页表项值
+    un_wp_page((unsigned long *)
+        (((address&gt;&gt;10) &amp; 0xffc) + (0xfffff000 &amp;
+        *((unsigned long *) ((address&gt;&gt;20) &amp;0xffc)))));
+
+}
+</code></pre>
+
+<h1>
+<a id="user-content-4物理内存的分配和释放" class="anchor" href="#4%E7%89%A9%E7%90%86%E5%86%85%E5%AD%98%E7%9A%84%E5%88%86%E9%85%8D%E5%92%8C%E9%87%8A%E6%94%BE" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>4.物理内存的分配和释放</h1>
+
+<p>下面两个函数仅仅针对物理内存操作，不涉及到线性地址。</p>
+
+<p>get_free_page返回可以用的一页物理地址。该方法从mem_map中查找值为0的项，得到可以用的页index后，将其换算成物理页的基地址
+physicalAddress = index&lt;&lt;12 + 1M， 并对该地址所在的4K字节置0.</p>
+
+<p>get_free_page的调用分析：该函数试图从mem_map数组中找到一个可以用的内存页，具体满足的是条件mem_map[inxex]=0，找到以后将mem_map[index]=1，然后将index 换算成主存物理地址，并对该页地址初始化0操作。如果在此过程中没有可以使用的内存页，则调用swap_out函数，swap_out从线性地址空间64M-4G按顺序寻找一个page frame在物理内存中的，如果找到这么一个page frame(肯定可以找到，否则页不会有swap_out发生)，则将该页表重置(*table_ptr = swap_nr&lt;&lt;1;)并将该page frame的数据写到硬盘上。</p>
+
+<pre><code>/*
+ * Get physical address of first (actually last :-) free page, and mark it
+ * used. If no free pages left, return 0.
+ */
+unsigned long get_free_page(void)
+{
+register unsigned long __res asm("ax");
+
+repeat:
+    __asm__("std ; repne ; scasb\n\t" //找到DI中最后的一个标志位为0的page  ECX-- AX=0 DI=mem_map+PAGING_PAGES-1
+        "jne 1f\n\t"
+        //OK，找到可以用的页，标志位置为1，注意scasb的伪代码为:
+        //%%AL-%%DI （compare byte in AL and des)
+        //%%DI=%%DI-1 (std and byte operation)
+        //所以等到repne判断%%DI=0的时候，%%DI对应的值已经减1了，故这里需要用1(%%edi)补偿回来
+        "movb $1,1(%%edi)\n\t"
+        //ECX执向 mem_map里面可以用的索引值，注意repne循环的时候使用ECX作为计数器自减
+        //ECX=(valid_page)&gt;&gt;12+LOW_MEM，注意在repne和scasb过程中，ECX作为计数器一直递减(std)
+        "sall $12,%%ecx\n\t"
+        "addl %2,%%ecx\n\t"  
+        "movl %%ecx,%%edx\n\t"
+        "movl $1024,%%ecx\n\t"
+        "leal 4092(%%edx),%%edi\n\t" //注意不是4096，因为是从低字节到高字节的 4 byte拷贝，第一个是4092-4096,最后一个是0-4
+        "rep ; stosl\n\t"//copy 1024(ECX--) from EAX to EDI(--)  (从高到低) 
+        "movl %%edx,%%eax\n"
+        "1:"
+        :"=a" (__res)
+        :"0" (0),"i" (LOW_MEM),"c" (PAGING_PAGES),
+        "D" (mem_map+PAGING_PAGES-1)
+        :"di","cx","dx");
+    if (__res &gt;= HIGH_MEMORY)
+        goto repeat;
+    if (!__res &amp;&amp; swap_out())
+        goto repeat;
+    return __res;
+}
+</code></pre>
+
+<p>free_page释放一页物理地址，所谓的“释放”是指将mem_map对应的共享值减1. 并不真正的将物理内存清除。在 copy-on-write中，新写入的进程会对原来共享内存进行free操作，本质上就是将共享计数从2减到1.</p>
+
+<p>free_page_tables释放指定线性地址空间内的4M*X的内存，包括管理这4M线性地址空间的一页页表内存也会释放，同时对应于该4M线性地址空间的page dir元素也会置为0.表示没有使用。</p>
+
+<h1>
+<a id="user-content-5虚拟内存-swap" class="anchor" href="#5%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98-swap" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>5.虚拟内存 swap</h1>
+
+<p>swap分区对上层mm是透明的，比如说我想访问一个线性地址，该线性地址的前20个bit决定了一个页表项在内存中的位置(10bit 页目录项 + 10bit 页表项)，当我们安装该物理内存地址访问到该页表项的值时，如果P=0，表示该页存储在swap分区中，其页表项的其余31bit则用来表示swap分区序号swan_nr(其实是15 bit，因为最大swap_nr=32K)，从swap分区序号swap_nr可以知道应该读硬盘的位置 (block sec = swap_nr &gt;&gt;3, 需要读8 sectors)。只有当P=1时，表实该页在物理内存中，页表项的值代表了实际的物理地址。</p>
+
+<p>可以这么理解，页表项描述了数据页的位置 </p>
+
+<ul>
+<li>  指向的页在内存中的物理地址(P==1): 20bit physical address (4K对齐 10 bit 页目录项 + 10 bit 页表项 ) </li>
+<li>  指向的页在硬盘中的物理地址(P==0): 15bit swap number (可以转化为block和sectors) </li>
+</ul>
+
+<p>swap主要提供两个函数:</p>
+
+<ul>
+<li>  swap_out：当有内存分配请求，并且当前的物理内存已经使用完毕，此时需要将一些数据从内存写到硬盘上，以便空出物理内存页。 (被get_free_page调用)</li>
+<li>  swap_in: 当有数据访问请求，并且访问的线性地址对应的页表项(前20bit)所指的内存页不存在，但是可以确定该页数据已经从磁盘上加载过，此时需要将对应内存页的数据从硬盘读入到内存中来。 (被do_no_page调用)</li>
+</ul>
+
+<p>一个程序首先是被fork处理，设置好pg_dir, page table以后，实际上page table entry还是指向原父进程的物理地址。下面会调用execve，完成子进程copy on write的内存操作。</p>
+
+<p>swap并不能提供给程序无限的内存使用空间。有一种错觉是swap类似北京到上海的铁轨，并不需要有北京-上海这么长的铁轨容量，只要够快不够用的时候可以临时搭建。对应到内存是说只要频繁的swap就可以支持无限的内存， 追究到实现细节是说swap在占用的情况下可以重新复用，好比北京到上海的铁轨，过了天津以后，北京-天津段的铁轨可以拆了再铺前面需要的一段。实际上并不是这样，swap在使用以后不可以自行拆除，除非是进程退出。
+所以，系统里的最大内存容量是被主存+swap限制的。在分不出新的内存page的情况下，系统会抛出OOM的错。swap只是主存的一个"数据"备份而已。而且还没办法区分数据的冷热。</p>
+
+<h1>
+<a id="user-content-lib库中的malloc和free" class="anchor" href="#lib%E5%BA%93%E4%B8%AD%E7%9A%84malloc%E5%92%8Cfree" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>lib库中的malloc和free</h1>
+
+<p>这里的lib库指的是kernel的调用库，并不是面向最终应用程序的glibc这种库。lib库的malloc和free等调用对kernel其他可能使用内存的组件(例如net)封装了内存管理的细节，使得组件可以方便的获取内存资源。由于malloc和free容易和面向应用程序的程序库重名，从linux0.98开始这两个函数被重命名为kmalloc, kfree。</p>
+
+<p>具体的实现层面引入bucket的概念，每个物理页可以分成若干个bucket，一个物理页上的bucket都是相同大小的，例如物理页1分成256个16byte，物理页2分成128个32byte等等。每个物理页有元数据bucket_desc进行管理，bucket_desc存储了bucket的大小，指向的物理页可用地址，物理页基地址等等。</p>
+
+<p>bucket_desc数据也会占用相应的内存，数据bucket_desc相当于metadata，不会释放，只会复用。而bucket_desc所管理的bucket对应的物理页，在refcnt降为0时会释放掉(调用逻辑释放free_page)，这样该页内存可以继续使用。
+全局指针free_bucket_desc保存可以使用的bucket_desc的列表，在全部的bucket_desc用完时会继续申请物理内存。 </p>
+
+<pre><code>// 管理一个page的数据结构  16bytes管理4K，一页为4K/16=256个，可以管理256*4K=1M内存
+struct bucket_desc {    /* 16 bytes */
+    void            *page;        //页基线性地址
+    struct bucket_desc  *next;    //用来将一页数据链接起来
+    void            *freeptr;     //当前可用页的线性地址(0表示无可用)
+    unsigned short      refcnt;   //当前页的bucket个数
+    unsigned short      bucket_size;  //bucket的大小
+};
+</code></pre>
+
+<p>相同大小的bucket页由一个链表chain管理，这样可以根据用户申请内存的大小，在链表chain中找寻最小那个可以满足用户请求的chain，然后跟据bucket_desc找到freeptr不为0的可以用的地址。
+<a href="/assets/2015-04-22-linux012-mm/bucket_dir.png" target="_blank"><img src="/assets/2015-04-22-linux012-mm/bucket_dir.png" alt="" style="max-width:100%;"></a></p>
+
+<h1>
+<a id="user-content-6总结" class="anchor" href="#6%E6%80%BB%E7%BB%93" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>6.总结</h1>
+
+<p>内存模块抽象了主存和硬盘swap分区，对上提供了内存使用的管理功能，包括内存的申请和释放等。
+从内存模块的分层概念上来说，内存模块首先对系统调用fork/execve/exit等进程的创建/执行/退出等，提供了以页目录表和页表为核心的线性地址空间的管理，使得每个进程都可以独享64M的虚拟地址空间；而对kernel中其他直接需要分配内存资源的模块，直接提供了物理内存的申请和释放的功能。当然，内存大小是受物理内存+swap分区的严格限制。
+<a href="/assets/2015-04-22-linux012-mm/layers.png" target="_blank"><img src="/assets/2015-04-22-linux012-mm/layers.png" alt="" style="max-width:100%;"></a></p>
+</article></body></html>
