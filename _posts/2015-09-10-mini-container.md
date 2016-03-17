@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "step by step build a mini linux container"
+title:  "一步步打造一个迷你linux container"
 date:   2015-09-10 11:33:25
 categories: docker 
 tags: docker linux
